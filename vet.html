@@ -1,0 +1,383 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silverglen Veterinary Clinic | Compassionate Pet Care</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"><style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8fbfc;
+    color:#333;
+    overflow-x:hidden;
+}
+
+:root{
+    --primary:#2c7a7b;
+    --secondary:#38b2ac;
+    --accent:#f6ad55;
+    --light:#ffffff;
+}
+
+header{
+    min-height:100vh;
+    background:linear-gradient(rgba(44,122,123,.8),rgba(56,178,172,.85)),
+    url('https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+.hero{
+    max-width:900px;
+    padding:20px;
+    animation:fadeIn 1.2s ease;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:white;
+    color:var(--primary);
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    background:var(--accent);
+    color:white;
+}
+
+.btn-secondary:hover{
+    transform:translateY(-3px);
+}
+
+.paw{
+    position:absolute;
+    color:rgba(255,255,255,.15);
+    font-size:40px;
+    animation:float 12s infinite linear;
+}
+
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:2.5rem;
+    color:var(--primary);
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card span{
+    font-size:45px;
+    display:block;
+    margin-bottom:15px;
+}
+
+.why{
+    background:#eef8f8;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.feature{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.hours{
+    max-width:700px;
+    margin:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+th{
+    background:var(--primary);
+    color:white;
+}
+
+th,td{
+    padding:15px;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#f5f5f5;
+}
+
+.map-container{
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.contact-box{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:white;
+    text-align:center;
+    border-radius:20px;
+    padding:40px;
+}
+
+.contact-box h2{
+    margin-bottom:15px;
+}
+
+.call-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:white;
+    color:var(--primary);
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:50px;
+    font-weight:600;
+}
+
+footer{
+    background:#123;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+    z-index:999;
+}
+
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@keyframes float{
+    from{
+        transform:translateY(110vh) rotate(0deg);
+    }
+    to{
+        transform:translateY(-120px) rotate(360deg);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+.hero h1{
+    font-size:2.5rem;
+}
+}
+</style></head>
+<body><header><div class="paw" style="left:10%;animation-delay:0s;">🐾</div>
+<div class="paw" style="left:30%;animation-delay:3s;">🐾</div>
+<div class="paw" style="left:55%;animation-delay:5s;">🐾</div>
+<div class="paw" style="left:80%;animation-delay:7s;">🐾</div><div class="hero">
+<h1>Silverglen Veterinary Clinic</h1>
+<p>Compassionate, Professional Veterinary Care for Your Beloved Pets.</p><div class="buttons">
+<a href="tel:0314013712" class="btn btn-primary">📞 Call Now</a>
+<a href="#location" class="btn btn-secondary">📍 Find Us</a>
+</div>
+</div></header><section class="fade">
+<div class="section-title">
+<h2>Our Services</h2>
+</div><div class="cards">
+<div class="card">
+<span>🐶</span>
+<h3>Dog Healthcare</h3>
+<p>Routine checkups, treatment and preventative care.</p>
+</div><div class="card">
+<span>🐱</span>
+<h3>Cat Healthcare</h3>
+<p>Dedicated feline healthcare services.</p>
+</div><div class="card">
+<span>💉</span>
+<h3>Vaccinations</h3>
+<p>Protecting your pets with essential vaccines.</p>
+</div><div class="card">
+<span>🩺</span>
+<h3>Health Checks</h3>
+<p>Comprehensive examinations and diagnostics.</p>
+</div><div class="card">
+<span>🏥</span>
+<h3>Surgery</h3>
+<p>Safe and professional surgical procedures.</p>
+</div><div class="card">
+<span>🦷</span>
+<h3>Dental Care</h3>
+<p>Keeping your pet's smile healthy and bright.</p>
+</div>
+</div>
+</section><section class="why fade">
+<div class="section-title">
+<h2>Why Choose Us?</h2>
+</div><div class="features">
+<div class="feature">✔ Experienced Veterinary Team</div>
+<div class="feature">✔ Friendly & Caring Environment</div>
+<div class="feature">✔ Modern Equipment</div>
+<div class="feature">✔ Convenient Durban Location</div>
+<div class="feature">✔ Affordable Pet Care</div>
+<div class="feature">✔ Trusted By Local Families</div>
+</div>
+</section><section class="fade">
+<div class="section-title">
+<h2>Opening Hours</h2>
+</div><div class="hours">
+<table>
+<tr>
+<th>Day</th>
+<th>Hours</th>
+</tr>
+<tr><td>Monday</td><td>9am – 6pm</td></tr>
+<tr><td>Tuesday</td><td>9am – 6pm</td></tr>
+<tr><td>Wednesday</td><td>9am – 6pm</td></tr>
+<tr><td>Thursday</td><td>9am – 6pm</td></tr>
+<tr><td>Friday</td><td>9am – 6pm</td></tr>
+<tr><td>Saturday</td><td>9am – 4pm</td></tr>
+<tr><td>Sunday</td><td>10am – 12pm</td></tr>
+</table>
+</div>
+</section><section id="location" class="fade">
+<div class="section-title">
+<h2>Find Us</h2>
+<p>305 Silverglen Drive, Silverglen, Durban, 4092</p>
+</div><div class="map-container">
+<iframe
+src="https://maps.google.com/maps?q=305%20Silverglen%20Drive%20Durban&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="450"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+</div>
+</section><section class="fade">
+<div class="contact-box">
+<h2>Need Veterinary Assistance?</h2>
+<p>Our team is here to help your pet stay healthy and happy.</p>
+<a href="tel:0314013712" class="call-btn">Call 031 401 3712</a>
+</div>
+</section><footer>
+<h3>Silverglen Veterinary Clinic</h3>
+<p>305 Silverglen Drive, Silverglen, Durban, 4092</p>
+<p>Phone: 031 401 3712</p>
+<br>
+<p>© 2026 Silverglen Veterinary Clinic. All Rights Reserved.</p>
+</footer><a class="whatsapp" href="https://wa.me/27314013712">💬</a>
+
+<script>
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+},{threshold:0.15});
+
+document.querySelectorAll('.fade').forEach(el=>{
+observer.observe(el);
+});
+
+</script></body>
+</html>
